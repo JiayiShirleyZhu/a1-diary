@@ -58,7 +58,7 @@ def edit_notebook(notebook_obj, notebook_path, option_lst):
     for i in range(len(option_lst)):
         
         if i % 2 == 0:
-            if i + 1 >= len(option_lst):
+            if i + 1 >= len(option_lst) or option_lst[i + 1].startswith('-'):
                 print("ERROR")
                 return
             
